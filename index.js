@@ -147,13 +147,19 @@ function test4(min, max){
 
   function generateNum(){
     let currentNum = getRandomNum(min, max);
+
+    if(boxForNumber.length >= (max - min + 1)){
+      console.error(`Все числа уже перебраны от ${min} до ${max}`)
+      return null;
+    }
+
     while(boxForNumber.includes(currentNum)){
       currentNum = getRandomNum(min, max);
     }
     boxForNumber.push(currentNum);
     return currentNum;
   }
-
+  console.log(boxForNumber)
   return generateNum;
 }
 
