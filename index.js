@@ -65,3 +65,49 @@ console.log(Object.values(arr));
 console.log(Object.entries(arr));
 console.log(Object.entries(arr).map((arrItem) => `${arrItem[0]} - ${arrItem[1]}`).join(', '));
 console.log(Object.assign({}, arr, arr2));
+const groups = [['Саша', 'Игорь'], ['Лидия', 'Сергей']];
+groups.forEach((items) =>{
+  items.forEach((members) => {
+    console.log(members)
+  })
+});
+
+const AGE = 3;
+
+function test1(intro){
+  function getExample(){
+    let a = 'lol';
+    let b = 'kek';
+
+    if(AGE === 30){
+      return a;
+    }
+    return b;
+  }
+  console.log(`${intro} ${getExample()}`)
+}
+
+test1('Скажи')
+
+
+function test2(){
+  var init = 'hripnv';
+  function getExample(){
+    console.log(init);
+  }
+  getExample()
+}
+
+test2();
+
+function test3(){
+  var a = 'hripnv';
+  function getExample(){
+    console.log(a);
+  }
+
+  return getExample;
+}
+
+let newFunc = test3();
+newFunc();
