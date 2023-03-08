@@ -111,3 +111,52 @@ function test3(){
 
 let newFunc = test3();
 newFunc();
+
+
+function crateGenerate(){
+  let a = 0;
+  function getExample(){
+    a++;
+    return a;
+  }
+  return getExample;
+}
+let myGenerate = crateGenerate();
+console.log(myGenerate());
+console.log(myGenerate());
+console.log(myGenerate());
+
+/*
+  ЗАДАЧА:
+  Напишите функцию-генератор для получения случайных идентификаторов
+  из указанного диапазона, и так, чтобы они не повторялись,
+  пока не будут перебраны все числа из этого промежутка.
+*/
+
+// Функция, которая создает рандомное число
+function getRandomNum(min, max){
+  let upper = Math.ceil(Math.min(Math.abs(min), Math.abs(max)));
+  let lower = Math.floor(Math.max(Math.abs(min), Math.abs(max)));
+  let result = Math.random() * (upper - lower + 1) + lower;
+
+  return Math.floor(result);
+}
+
+function test4(min, max){
+  let boxForNumber = [];
+
+  function generateNum(){
+    let currentNum = getRandomNum(min, max);
+    while(boxForNumber.includes(currentNum)){
+      currentNum = getRandomNum(min, max);
+    }
+    boxForNumber.push(currentNum);
+    return currentNum;
+  }
+
+  return generateNum;
+}
+
+let myRandomNum = test4(0, 100);
+
+console.log(myRandomNum())
