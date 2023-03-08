@@ -48,3 +48,20 @@ const films = [
 // })
 
 // console.log(arr);
+
+const arr = {
+  'Задачи на сегодня': 3,
+  'Просроченные': 2,
+  'Выполненные': 388,
+}
+const arr2 = {
+  'lol': 3,
+  'kek': 2,
+  'som': 388,
+}
+
+console.log(Object.keys(arr));
+console.log(Object.values(arr));
+console.log(Object.entries(arr));
+console.log(Object.entries(arr).map((arrItem) => `${arrItem[0]} - ${arrItem[1]}`).join(', '));
+console.log(Object.assign({}, arr, arr2));
