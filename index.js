@@ -23,3 +23,28 @@ const zeroFuel = (pump, mpg, fuelLeft) => {
 };
 zeroFuel()
 
+//Пример из Академии. Приеняем метод .map
+
+const films = [
+    {
+      id: 0,
+      title: 'Die hard',
+    },
+    {
+      id: 1,
+      title: 'Terminator',
+    },
+  ];
+
+//   let arr = [];
+//   films.forEach((films, index) => {
+//     arr[index] = films.title;
+//   });
+
+//   console.log(arr);
+
+// const arr = films.map((films, index) => {
+//   return films.title;
+// })
+
+// console.log(arr);
