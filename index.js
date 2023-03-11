@@ -183,3 +183,53 @@ function enough(cap, on, wait) {
 }
 
 enough(100, 32, 88);
+// You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+// Write a program that returns the girl's age (0-9) as an integer.
+// Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+function getAge(inputString){
+  return parseInt(inputString);
+}
+
+getAge("4 years old");
+
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+// [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+function sumTwoSmallestNumbers(numbers) {  
+  let sortArr = numbers.sort((a, b) => a - b);
+  return sortArr[0] + sortArr[1];
+}
+
+sumTwoSmallestNumbers([5, 8, 12, 19, 22]);
+
+// When provided with a number between 0-9, return it in words.
+// Input :: 1
+// Output :: "One".
+// If your language supports it, try using a switch statement.
+
+function switchItUp(number){
+  switch(number) {
+    case 1:
+      return 'One';
+    case 2:
+      return 'Two';
+    case 3:
+      return 'Three';
+    case 4:
+      return  'Four';
+    case 5:
+      return 'Five';
+    case 6:
+      return 'Six';
+    case 7:
+      return 'Seven';
+    case 8:
+      return 'Eight';
+    case 9:
+      return 'Nine';
+    default:
+      return 'Zero'
+  }
+}
