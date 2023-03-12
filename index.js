@@ -247,3 +247,15 @@ function firstNonConsecutive (arr) {
 }
   return null;
 }
+
+
+// "4",  "5" --> "9"
+// "34", "5" --> "39"
+// "", "" --> "0"
+// "2", "" --> "2"
+// "-5", "3" --> "-2"
+function sumStr(a,b) {
+  return +a + +b + '';
+}
+
+sumStr()
